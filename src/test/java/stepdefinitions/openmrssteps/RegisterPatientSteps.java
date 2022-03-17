@@ -45,6 +45,7 @@ public class RegisterPatientSteps {
         openMRSRegisterPage.sendphoneNumber(patientInfoMap.get("PhoneNumber"));
         openMRSRegisterPage.sendRelativeInfo(patientInfoMap.get("RelationType"),patientInfoMap.get("RelativeName"));
         openMRSRegisterPage.clickConfirmButton();
+
     }
     @Then("the user validates the patient name and familyName")
     public void the_user_validates_the_patient_name_and_family_name(DataTable dataTable) {
