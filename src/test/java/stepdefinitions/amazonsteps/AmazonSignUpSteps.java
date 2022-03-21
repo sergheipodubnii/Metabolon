@@ -29,5 +29,6 @@ public class AmazonSignUpSteps {
         List<String> allInformationFromDataTable=dataTable.asList();
         amazonSignUpPage.allInformation(allInformationFromDataTable.get(0),allInformationFromDataTable.get(1),allInformationFromDataTable.get(2)
                 ,allInformationFromDataTable.get(3));
+        System.out.println("kjsbajkqsbnkjdqw");
     }
 }
