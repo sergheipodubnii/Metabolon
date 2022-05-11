@@ -1,5 +1,4 @@
-package stepdefinitions.etsysteps;
-
+package stepdefinitions.saucedemosteps;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -14,20 +13,17 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Date;
 
-public class HookEtsy {
-
-  WebDriver driver=DriverHelper.getDriver();
+public class HookSauceDemo {
+    WebDriver driver=DriverHelper.getDriver();
     @Before
     public void beforeScenario(){
-        System.out.println("Before scenario");
+
     }
     @After
     public void afterScenario(Scenario scenario){
-
         Date currentDate=new Date();
-        String screenshotfileName= currentDate.toString().replace(" ","-")//3-13-2022
-                .replace(":","-");
-
+        String screenshotfileName=currentDate.toString().replace(" ","-")
+                .replace(":","-");//3-13-2022
         if(scenario.isFailed()){
             File screenshotFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
             try {
@@ -36,6 +32,7 @@ public class HookEtsy {
                 e.printStackTrace();
             }
         }
-       DriverHelper.tearDown();
+        DriverHelper.tearDown();
+
     }
 }

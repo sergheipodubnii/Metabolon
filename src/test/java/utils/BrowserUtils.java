@@ -68,7 +68,7 @@ public class BrowserUtils {
         }
     }
 
-    //in real work this will help you a lot once you test different tabs or windows.
+
     public static void switchByTitle(WebDriver driver, String title) {
         Set<String> allPages = driver.getWindowHandles();
         for (String id : allPages) {//internet-->new Window
